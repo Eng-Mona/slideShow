@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kids Slide Show</title>
+	<link rel="stylesheet" type="text/css" href="assest/css/stylesheet.css">
+</head>
+<body>
+	<h1> My Kids Slide Show</h1>
+	<div class="container">
+		<img class="slide" src="assest/image/1.jpg">
+		<img class="slide" src="assest/image/2.jpg">
+		<img class="slide" src="assest/image/3.jpg">
+		<img class="slide" src="assest/image/4.jpg">
+		<img class="slide" src="assest/image/5.jpg">
+		<img class="slide" src="assest/image/6.jpg">
+		<img class="slide" src="assest/image/7.jpg">
+		
+	</div>
+	<button onClick="changeDivs(-1)">Previuos</button>
+  	<button onClick="changeDivs(1)">Next</button>
+	<script>
+		var slideIndex=1;
+		showDivs(slideIndex);
+		function changeDivs(n){
+			slideIndex +=n;
+		}
+		function showDivs(n) {
+			var x= document.getElementsByClassName("slide")
+			if(n>x.lenght){
+				slideIndex=1;
+			}
+			if(n=0){
+				slideIndex=x.lenght;
+			}
+
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "none"; 
+			}
+			x[slideIndex-1].style.display = "block";
+			// body...
+		}
+
+
+		
+		
+	</script>
+
+</body>
+</html>
