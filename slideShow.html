@@ -26,12 +26,14 @@
 		}
 		function showDivs(n) {
 			var x= document.getElementsByClassName("slide")
-			if(n>x.lenght){
-				slideIndex=1;
+			if(n > x.length){
+				slideIndex = 1;
 			}
-			if(n=0){
-				slideIndex=x.lenght;
+			if(n =0){
+				slideIndex = x.length;
 			}
+ 
+
 
 			for (var i = 0; i < x.length; i++) {
 				x[i].style.display = "none"; 
